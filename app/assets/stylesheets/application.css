@@ -1,0 +1,140 @@
+
+
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *= require advert
+ *= require bootstrap-3.3.2.min
+ *= require_tree .
+ *= require_self
+ */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+body {
+    background-color: #FFFFFF;
+}
+
+.navbar-inverse {
+    background-color: #D70F2B;
+    border-color: #090909;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #EAF3F5;
+}
+
+.main_heading {
+    height: 120px;
+    position: relative;
+    display: block;
+}
+
+.main_heading .img {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    overflow: hidden;
+    background-color: #E6E6E6;
+}
+
+img {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.logo {
+    margin: -16px 0px 0px;
+    float: left;
+    height: 100px;
+}
+
+.small-12 {
+    width: 100%;
+}
+
+.columns {
+    position: relative;
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+    float: left;
+}
+
+.wrap{
+    color: #FFF;
+    text-shadow: 0px 0px 16px rgba(0, 0, 0, 0.5);
+}
+
+.main_h2{
+    font-size: 15px;
+    color: #949494;
+    line-height: 120%;
+    margin: 0px;
+}
+
+.main_heading .txt-helper {
+    position: relative;
+    height: 120px;
+}
+
+.txt {
+    position: absolute;
+    bottom: 20px;
+    padding-left: 50px;
+}
+
+.main_h1 .wrap{
+
+    display: inline-block;
+}
+
+.mbox {
+    height: 48px;
+    border-right: 1px solid lavenderblush;
+    padding-right: 10px;
+
+    display: block;
+    padding: 10px;
+    font-size: 1.5rem;
+    text-align: center;
+    text-align: center;
+}
+
+.put_color_button{
+    background-color: #BBBBBB ;
+
+}
+.margin_botton_menu{
+    margin-bottom: 12px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.acolor{
+    color: #FFFFFF;
+    vertical-align: middle;
+    text-align: center;
+    font-size: medium;
+    padding: 10px;
+}
+
+.new_padding{
+    position: relative;
+    min-height: 1px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 5px;
+
+}
+
+

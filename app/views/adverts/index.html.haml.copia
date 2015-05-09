@@ -1,0 +1,30 @@
+=render partial: "header"
+=render partial: "menu2"
+
+.container.putcolor
+  - @adverts.each_slice(4) do |advert_array|
+    .row.putcolor
+    - advert_array.each do |advert|
+      - @photo="adverts/"+advert.id.to_s+".jpg"
+      - @icono="adverts/icono"+advert.category_id.to_s+".png"
+      .col-sm-3.margin_bottom.putcolor.new_padding
+        .col-xs-12.col-sm-11.col-sm-offset-1.new_padding
+          .activity-item
+            .activity-img
+              = link_to image_tag( @photo), advert_path(advert)
+            .activity-body
+              .activity-txt
+                .activity-heading
+                  %h3
+                    %a{:href => edit_advert_path(advert)}=advert.description
+                .host
+                  .host_avatar.medium
+                    =image_tag( @icono )
+                  %span
+                    =advert.title
+              %footer.activity-foot
+                .business-block
+                  .business-text
+                    -@id=advert.advertiser_id
+                    -@advertiser=Advertiser.find(@id)
+                    =@advertiser.tradename

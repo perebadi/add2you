@@ -1,0 +1,28 @@
+=render partial: "header"
+.container
+  .col-sm-12
+    .col-xs-4
+      .jumbotron.text-center
+    .col-xs-8
+      .jumbotron.text-center
+        %h1 Fixed Width Layout
+        %p.lead The Bootstrap 3 grid is fluid only. This example shows how to use a custom container to create a fixed width layout.
+        %p
+          %a.btn.btn-large.btn-success{:href => "http://bootply.com/tagged/bootstrap-3", :target => "ext"} More Examples
+  .row
+    .col-lg-6
+      %h4 Mobile First
+      %p Responsive by default, and a clean "flat" design.
+      %h4 Powerful Grid
+      %p 3 responsive grid sizes to control the grid layout on tiny, small and large displays.
+    .col-lg-6
+      %h4 New Elements
+      %p New panels, list groups, glyphicons and justified navigation.
+      %h4 Less Bloat
+      %p The optimized CSS is in a single file. Glyphicons are now separate.
+  %hr
+    .jumbotron.text-center
+      %h2 Moving from Bootstrap 2.x to 3.0?
+      %p.lead Everything has changed, so you can't just replace the 2.x with the 3.0 files. The folks at Bootply, the Bootstrap Playground have created a migration guide to help.
+      %p
+        %a.btn.btn-large.btn-success{:href => "http://www.bootply.com/bootstrap-3-migration-guide", :target => "ext"} Migration Guide

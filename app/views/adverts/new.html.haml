@@ -1,0 +1,67 @@
+=render partial: "header"
+=render partial: "menu2"
+.container.putcolor
+  .center.jumbotron
+    = form_for @advert, as: "advert", url: adverts_path, html: { class: "form-horizontal" }  do |f|
+      .row.col-sm-10
+        .form-group
+        .row
+          .col-sm-1
+            = f.label :title, :caption => "Title or Claim: ", :class => 'control-label'
+          .col-sm-11
+            = f.text_field :title, :placeholder => "Title or no ", :class => 'form-control'
+        .form-group
+        .row
+          .col-sm-1
+            = f.label :description, :caption => "Description:", :class => 'control-label'
+          .col-sm-11
+            = f.text_area :description, :placeholder => "Description", :class => 'form-control'
+        .form-group
+        .row
+          .col-sm-1
+            = f.label :photo, :caption => "Photo or imag:", :class => 'control-label'
+          .col-sm-5
+            = f.text_field :photo, :placeholder => "Photo ", :class => 'form-control'
+            //= f.file_field :photo, :placeholder => "Photo or image", :class => 'form-control'
+        .form-group
+        .row
+          .col-sm-1
+            = f.label :category_id, :caption => "Category:", :class => 'control-label'
+          .col-sm-3
+            = f.select :advertiser_id,  options_for_select(@categories.collect { |fa|[fa.category.titleize, fa.id] }, 1), {}, :class => 'form-control'
+          .col-sm-8
+        .form-group
+        .row
+          .col-sm-1
+            = f.label :country, :caption => "Country:", :class => 'control-label'
+          .col-sm-3
+            = f.select :country,  options_for_select(@country.collect { |fa|[fa.country_name.titleize] }, 1), {}, :class => 'form-control'
+          .col-sm-8
+        .form-group
+        .row
+          .col-sm-1
+            = f.label :state, :caption => "State:", :class => 'control-label'
+          .col-sm-3
+            = f.select :state,  options_for_select(@state.collect { |fa|[fa.state_name.titleize] }, 1), {}, :class => 'form-control'
+          .col-sm-8
+        .form-group
+        .row
+          .col-sm-1
+            = f.label :postal, :caption => "Postal Code:", :class => 'control-label'
+          .col-sm-2
+            = f.text_field :postal, :placeholder => "Postal Code", :class => 'form-control'
+          .col-sm-1
+            = f.label :contactphone, :caption => "Contact Phone:", :class => 'control-label'
+          .col-sm-2
+            = f.text_field :contactphone, :placeholder => "900000000", :class => 'form-control'
+          .col-sm-1
+            = f.label :advertiser_id, :caption => "advertiser_id:", :class => 'control-label'
+          .col-sm-2
+            = f.select :advertiser_id,  options_for_select(@advertisers.collect { |fa|[fa.tradename.titleize, fa.id] }, 1), {}, :class => 'form-control'
+        .form-group
+        .row
+          .col-sm-10
+            = f.submit "Submit" , :class=> "btn btn-primary btn-lg"
+    .row
+      .col-sm-12
+        .form-process-contact

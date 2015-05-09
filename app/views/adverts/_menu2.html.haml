@@ -1,0 +1,30 @@
+%nav.navbar.navbar-inverse.navbar-static-top{role: "navigation"}
+  .container
+    .navbar-header
+      %button{type: "button", class:"navbar-toggle", "data-toggle" => "collapse", "data-target" => ".navbar-collapse"}
+        %span{class:"icon-bar"}
+        %span{class:"icon-bar"}
+        %span{class:"icon-bar"}
+    %a.navbar-brand.text-logo{href: "#"}
+      %i.icon-signout
+        = content_for :window_title
+    .navigation.navbar-collapse.collapse
+      %ul.nav.navbar-nav.menu-right
+        %li.active
+          %a{href:"#belleza"}
+            Belleza y estética
+        %li
+          %a{href:"#moda"}
+            Moda
+        %li
+          %a{href:"#restaurantes"}
+            Restaurantes
+        %li
+          %a{href:"#ocio"}
+            Ocio
+        %li
+          %a{href:"#salud"}
+            Salud
+        %li
+          %a{href:"#otros"}
+            Otros
