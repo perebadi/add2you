@@ -4,8 +4,8 @@
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
  *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ * Any CSS and SCSS file within this directory, lib//assets/stylesheets, vendor//assets/stylesheets,
+ * or any plugin's vendor//assets/stylesheets directory can be referenced here using a relative path.
  *
  * You're free to add application-wide styles to this file and they'll appear at the bottom of the
  * compiled file so the styles you add here take precedence over styles defined in any styles
@@ -21,7 +21,9 @@
 
 body {
     background-color: #FFFFFF;
+    font-family: Verdana;
 }
+
 
 .navbar-inverse {
     background-color: #D70F2B;
@@ -38,6 +40,11 @@ body {
     display: block;
 }
 
+
+.padding0{
+    padding: 0px;
+    margin-bottom: 0px;
+}
 .main_heading .img {
     position: absolute;
     left: 0px;
@@ -57,6 +64,10 @@ img {
     margin: -16px 0px 0px;
     float: left;
     height: 100px;
+}
+
+.padding20{
+    padding: 20px;
 }
 
 .small-12 {
@@ -137,4 +148,77 @@ img {
 
 }
 
+
+.login-txt{
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-size: 13px;
+    line-height: 110%;
+    font-family: inherit;
+    color: #808080;
+    font-weight: normal;
+    font-style: normal;
+    cursor: default;
+}
+
+.login-txt .linkto {
+    position: absolute;
+    right: 0px;
+    left: 0px;
+    top: -200px;
+    align : left;
+    margin: 0px;
+    padding: 50px;
+    float: right;
+    box-sizing: border-box;
+    color: #FFFFFF;
+}
+
+.login-txt .linkto a{
+    background: none repeat scroll 0% 0% rgba(0, 0, 0, 0.3);
+    color: #FFFFFF;
+    float: right;
+    font-size: 12px ;
+}
+
+.fontsize14{
+    font-size: 14px;
+    font-family: Verdana;
+}
+
+
+@font-face {
+    font-family: 'ProximaNova-Regular';
+    src: url(font-path('ProximaNova-Reg-webfont.eot'));
+    src: url(font-path('ProximaNova-Reg-webfont.eot?#iefix')) format('embedded-opentype'),
+url(font-path('ProximaNova-Reg-webfont.woff')) format('woff'),
+url(font-path('ProximaNova-Reg-webfont.ttf')) format('truetype'),
+url(font-path('fProximaNova-Reg-webfont..svg#fontawesomeregular')) format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ProximaNova-Semibold';
+    src: url(font-path('ProximaNova-Sbold-webfont.eot'));
+    src: url(font-path('ProximaNova-Sbold-webfont.eot?#iefix')) format('embedded-opentype'),
+url(font-path('ProximaNova-Sbold-webfont.woff')) format('woff'),
+url(font-path('ProximaNova-Sbold-webfont.ttf')) format('truetype'),
+url(font-path('fProximaNova-Sbold-webfont..svg#fontawesomeregular')) format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ProximaNova-Bold';
+    src: url(font-path('ProximaNova-Bold-webfont.eot'));
+    src: url(font-path('ProximaNova-Bold-webfont.eot?#iefix')) format('embedded-opentype'),
+url(font-path('ProximaNova-Bold-webfont.woff')) format('woff'),
+url(font-path('ProximaNova-Bold-webfont.ttf')) format('truetype'),
+url(font-path('fProximaNova-Bold-webfont..svg#fontawesomeregular')) format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
 

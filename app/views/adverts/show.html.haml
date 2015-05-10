@@ -1,16 +1,33 @@
 =render partial: "header"
+=render partial: "menu2"
 - @photo="adverts/"+@advert.id.to_s+".jpg"
-.container
+.container.putcolor
+  .col-sm-12
+    .col-xs-12.padding20
+      %h2.title_detail
+        =@advert.title
   .col-sm-12
     .col-xs-4
-      .jumbotron.text-center
-        =image_tag( @photo )
-    .col-xs-8
-      .jumbotron.text-center
-        %h1 Fixed Width Layout
-        %p.lead The Bootstrap 3 grid is fluid only. This example shows how to use a custom container to create a fixed width layout.
-        %p
-          %a.btn.btn-large.btn-success{:href => "http://bootply.com/tagged/bootstrap-3", :target => "ext"} More Examples
+      =image_tag( @photo )
+    .col-xs-5
+      %h1 Fixed Width Layout
+      %p.lead The Bootstrap 3 grid is fluid only. This example shows how to use a custom container to create a fixed width layout.
+      %p
+      %a.btn.btn-large.btn-success{:href => "http://bootply.com/tagged/bootstrap-3", :target => "ext"} More Examples
+    .col-xs-3.putcolor_prices
+      .row.col-sm-12
+        .col-xs-6
+          1
+        .col-xs-6
+          2
+      .row.col-sm-12
+        .col-xs-12
+          3
+      .row.col-sm-12
+        .col-xs-6
+          4
+        .col-xs-6
+          5
   .row
     .col-lg-6
       %h4 Mobile First

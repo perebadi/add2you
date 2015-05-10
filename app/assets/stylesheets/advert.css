@@ -23,11 +23,28 @@ body {
     position: relative;
 }
 
+.title_detail {
+    font-size: 35px;
+    text-align: center;
+}
+
+.padding10{
+    padding: 20px;
+}
+
 
  .putcolor{
      background-color: transparent;
+     background-color: #F8F8F8;
 
  }
+
+ .putcolor_prices{
+    background-color: #BBBBBB;
+     min-height: 50px;
+     height: 250px;
+ }
+
 
 
  .main_container {
@@ -333,5 +350,10 @@ ul {
 .div-rate {
     vertical-align: middle;
     display: inline-block;
+}
+
+h2 .title_detail{
+    font-size: 16px;
+    text-align: center;
 }
 
