@@ -1,47 +1,72 @@
 =render partial: "header"
 =render partial: "menu2"
-- @photo="adverts/"+@advert.id.to_s+".jpg"
+%script{:src => "http://maps.googleapis.com/maps/api/js?key=AIzaSyA83Mb5vW_k6DGLYAodQb5HeWKV0wRkGEA&sensor=false", :type => "text/javascript"}
+  :cdata
+- @photo="../assets/adverts/"+@advert.id.to_s+".jpg"
 .container.putcolor
-  .col-sm-12
-    .col-xs-12.padding20
-      %h2.title_detail
+  .col-sm-12.padding20
+    .col-xs-3
+      %img.img-thumbnail{:alt => "", :src => @photo }/
+    .col-xs-6
+      %h1
         =@advert.title
-  .col-sm-12
-    .col-xs-4
-      =image_tag( @photo )
-    .col-xs-5
-      %h1 Fixed Width Layout
-      %p.lead The Bootstrap 3 grid is fluid only. This example shows how to use a custom container to create a fixed width layout.
+      %p.lead
+        =@advert.description
       %p
-      %a.btn.btn-large.btn-success{:href => "http://bootply.com/tagged/bootstrap-3", :target => "ext"} More Examples
     .col-xs-3.putcolor_prices
-      .row.col-sm-12
-        .col-xs-6
-          1
-        .col-xs-6
-          2
-      .row.col-sm-12
-        .col-xs-12
-          3
-      .row.col-sm-12
+      .col-sm-12.myheight40.padding5
+        .col-xs-6.padding5
+          %span.discount
+            %center
+              =@advert.discount.to_s + "%"
+        .col-xs-6.padding5.leftborder
+          %span.real_price
+            %center
+              %strike
+                =@advert.real_price.to_s + "€"
+      .col-sm-12.padding10
+        .col-xs-12.myheight80.topborder
+          %span.offer_price
+            %center
+              =@advert.offer_price.to_s + "€"
+        .col-xs-12.myheight80
+          %a.mibtn.bg-compra{:href => edit_advert_path(@advert)}"¡Consíguelo ahora!"
+      .col-sm-12.myheight80
         .col-xs-6
           4
         .col-xs-6
           5
-  .row
-    .col-lg-6
-      %h4 Mobile First
-      %p Responsive by default, and a clean "flat" design.
-      %h4 Powerful Grid
-      %p 3 responsive grid sizes to control the grid layout on tiny, small and large displays.
-    .col-lg-6
-      %h4 New Elements
+  .col-sm-12.padding20
+    .col-xs-6
+      .col-sm-12.put_color_mapa
+        %h4 Mapa
+      .col-sm-12.padding5
+        #map_canvas.mapa
+    .col-xs-6.padding_right0
+      .col-sm-12.put_color_detalles
+        %h4 Detalles
       %p New panels, list groups, glyphicons and justified navigation.
       %h4 Less Bloat
-      %p The optimized CSS is in a single file. Glyphicons are now separate.
-  %hr
-    .jumbotron.text-center
-      %h2 Moving from Bootstrap 2.x to 3.0?
-      %p.lead Everything has changed, so you can't just replace the 2.x with the 3.0 files. The folks at Bootply, the Bootstrap Playground have created a migration guide to help.
       %p
-        %a.btn.btn-large.btn-success{:href => "http://www.bootply.com/bootstrap-3-migration-guide", :target => "ext"} Migration Guide
+    :javascript
+            $(document).ready(function() {
+            initialize("Carrer horitzo 7, Gava");
+            });
+
+            function initialize(address) {
+            alert ("here");
+            var geoCoder = new google.maps.Geocoder(address)
+            var request = {address:address};
+
+            geoCoder.geocode(request, function(result, status){
+              var latlng = new google.maps.LatLng(result[0].geometry.location.lat(), result[0].geometry.location.lng());
+              var myOptions = {
+                zoom: 15,
+                center: latlng,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+              };
+                       var map = new google.maps.Map(document.getElementById("map_canvas"),myOptions);
+
+            var marker = new google.maps.Marker({position:latlng,map:map,title:'title'});
+            })
+            }

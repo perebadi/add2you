@@ -19,6 +19,91 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+
+/******************************************************  PRECIOS DE SHOW ADVERTS  */
+.discount{
+    font-size: 180%;
+    color: #FFFFFF;
+}
+
+.real_price{
+    font-size: 180%;
+    color: #B00100;
+}
+
+.offer_price{
+    font-size: 350%;
+    color: #FFFFFF;
+}
+
+.myheight40{
+    height: 40px;
+}
+.myheight80{
+    height: 80px;
+}
+
+.padding5{
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.leftborder{
+    border-left: 1px solid #FFFFFF;
+}
+
+.topborder{
+    border-top: 1px solid #FFFFFF;
+}
+
+.mibtn
+{
+    background-color:#ccc;
+    padding:10px 10px 10px 10px;
+    border-radius:10px;
+    color: #FFFFFF !important;
+    display:inline-block;
+    font-size:16px;
+    font-weight:normal;
+    text-decoration:none;
+    text-align:center;
+    cursor:pointer;
+    margin-top:10px;
+    margin-bottom:10px;
+    line-height:22px;
+}
+
+a.mibtn:hover,mibtn:hover,input[type="submit"]:hover,input[type="reset"]:hover,input[type="button"]:hover{box-shadow:0px 0px 5px rgba(0,0,0,0.3)}
+a.mibtn:active,mibtn:active,input[type="submit"]:active,input[type="reset"]:active,input[type="button"]:active{color:#fff}
+a.mibtn:focus,mibtn:focus,input[type="submit"]:focus,input[type="reset"]:focus,input[type="button"]:focus{color:#fff}
+
+.bg-compra{background-color:#D70F2B !important}
+.bg-grey{background-color:#666666 !important;color:#fff !important;}
+
+
+.put_color_mapa{
+    background-color: #BBBBBB;
+    border-radius: 5px;
+}
+
+.put_color_detalles{
+    background-color: #BBBBBB;
+    border-radius: 5px;
+}
+
+.padding_right0{
+    padding-right: 0px;
+}
+
+.mapa{
+    width: 100%;
+    height: 300px;
+     /* {:style => "width:450px; height:300px"};*/
+}
+/****************************************************FIN PRECIOS DE SHOW ADVERTS  */
+
 body {
     background-color: #FFFFFF;
     font-family: Verdana;
@@ -27,7 +112,7 @@ body {
 
 .navbar-inverse {
     background-color: #D70F2B;
-    border-color: #090909;
+    border-color: #FFFFFF;
 }
 
 .navbar-inverse .navbar-nav > li > a {
